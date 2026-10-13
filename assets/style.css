@@ -1,0 +1,161 @@
+/* 佐々木IT粗物店 共通スタイル */
+:root {
+  --ground: #F6F5F1;
+  --ground-2: #ECE9E2;
+  --card: #FFFFFF;
+  --line: #D9D5CC;
+  --ink: #1C2430;
+  --ink-2: #36404D;
+  --ink-3: #4A5563;
+  --ai: #1F3A5F;      /* 藍 */
+  --copper: #A4541F;  /* 銅 */
+  --copper-ink: #8A4419;
+  --mincho: 'Shippori Mincho B1', serif;
+  --gothic: 'Zen Kaku Gothic New', sans-serif;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--gothic);
+  line-height: 1.75;
+  -webkit-text-size-adjust: 100%;
+}
+a { color: var(--ai); }
+a:hover { color: var(--copper); }
+img { max-width: 100%; height: auto; display: block; }
+
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+@media (max-width: 480px) { .wrap { padding-left: 16px; padding-right: 16px; } }
+
+/* ヘッダー */
+.site-header { border-bottom: 1px solid var(--line); }
+.site-header .wrap {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 4px 32px; padding-top: 12px; padding-bottom: 12px;
+}
+.brand { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 12px; text-decoration: none; color: var(--ink); }
+.brand-ja { font-family: var(--mincho); font-weight: 800; font-size: 22px; letter-spacing: 0.08em; }
+.brand-en { font-size: 12px; color: var(--ink-3); letter-spacing: 0.06em; }
+.site-nav { display: flex; flex-wrap: wrap; gap: 0 24px; font-size: 15px; }
+.site-nav a { text-decoration: none; padding: 10px 0; display: inline-block; }
+
+/* 見出し・共通 */
+.mincho { font-family: var(--mincho); font-weight: 800; letter-spacing: 0.06em; }
+h2.sec { margin: 0; font-family: var(--mincho); font-weight: 800; font-size: 30px; letter-spacing: 0.06em; line-height: 1.4; }
+.lead { margin: 4px 0 0; color: var(--ink-3); }
+.section { padding-top: 64px; padding-bottom: 64px; }
+.band { background: var(--ground-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.band-white { background: var(--card); border-top: 1px solid var(--line); }
+.rule-top { border-top: 1px solid var(--line); }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 24px;
+  font-weight: 700; text-decoration: none; border: 1.5px solid var(--ai);
+}
+.btn-primary { background: var(--ai); color: #FFFFFF; }
+.btn-primary:hover { background: #17304F; color: #FFFFFF; }
+.btn-outline { color: var(--ai); }
+.btn-outline:hover { background: var(--ai); color: #FFFFFF; }
+.btn-white { background: #FFFFFF; color: var(--ai); border-color: #FFFFFF; }
+.btn-white:hover { color: var(--copper); }
+.btn svg { flex: none; }
+
+/* 札 */
+.tag { display: inline-block; font-size: 12px; line-height: 1.6; padding: 0 8px; white-space: nowrap; }
+.tag-stock { background: var(--ai); color: #FFFFFF; border: 1.5px solid var(--ai); }
+.tag-order { border: 1.5px solid var(--copper); color: var(--copper-ink); }
+.tag-soon  { border: 1.5px dashed #6B7280; color: var(--ink-3); }
+.tag-done  { border: 1.5px solid #9A948A; color: var(--ink-3); background: var(--ground-2); }
+
+/* 店先 */
+.hero { display: flex; flex-wrap: wrap; gap: 48px; align-items: center; padding-top: 72px; padding-bottom: 56px; }
+.hero-text { flex: 999 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 20px; }
+.hero-est { align-self: flex-start; border: 1.5px solid var(--ai); color: var(--ai); padding: 2px 12px; font-size: 13px; letter-spacing: 0.2em; }
+.hero h1 { margin: 0; font-family: var(--mincho); font-weight: 800; font-size: clamp(36px, 6vw, 60px); line-height: 1.3; letter-spacing: 0.04em; }
+.hero p { margin: 0; font-size: 17px; color: var(--ink-2); max-width: 34em; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+.hero-figure { flex: 1 1 300px; min-width: 0; margin: 0; }
+
+/* 仮置き画像 */
+.ph {
+  background: var(--ground-2); border: 1.5px dashed #9A948A; color: var(--ink-3);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+  text-align: center; font-size: 13px; padding: 16px;
+}
+
+/* 棚 */
+.shelf-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px; margin-bottom: 28px; }
+.legend { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 13px; }
+.legend li { display: flex; align-items: center; gap: 6px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.card { background: var(--card); border: 1px solid var(--line); display: flex; flex-direction: column; }
+.card-shot { aspect-ratio: 16 / 10; border-bottom: 1px solid var(--line); overflow: hidden; }
+.card-shot img { width: 100%; height: 100%; object-fit: cover; }
+.card-shot.ph { border: 0; border-bottom: 1px solid var(--line); }
+.card-body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1; }
+.card-meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 12px; color: var(--ink-3); }
+.card h3 { margin: 0; font-size: 19px; line-height: 1.45; }
+.card p { margin: 0; font-size: 15px; color: var(--ink-2); flex-grow: 1; }
+.card-link { align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-weight: 700; text-decoration: none; }
+
+.links { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.link-card { background: var(--card); border: 1px solid var(--line); padding: 18px 22px; text-decoration: none; color: var(--ink); display: flex; flex-direction: column; gap: 4px; }
+.link-card strong { font-size: 17px; }
+.link-card span { color: var(--ink-2); font-size: 15px; }
+.link-card:hover { border-color: var(--ai); color: var(--ink); }
+
+/* 店主とお知らせ */
+.split { display: flex; flex-wrap: wrap; gap: 48px; }
+.split > * { min-width: 0; display: flex; flex-direction: column; gap: 12px; }
+.split .main { flex: 999 1 460px; }
+.split .side { flex: 1 1 300px; }
+.news { list-style: none; margin: 0; padding: 0; }
+.news li { display: flex; flex-wrap: wrap; gap: 0 16px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+.news time { color: var(--ink-3); white-space: nowrap; }
+
+/* お問い合わせ帯 */
+.contact { background: var(--ai); color: #FFFFFF; }
+.contact .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; padding-top: 56px; padding-bottom: 56px; }
+.contact h2 { color: #FFFFFF; }
+.contact p { margin: 8px 0 0; color: #E3E8EF; }
+
+.site-footer .wrap { padding-top: 24px; padding-bottom: 32px; font-size: 13px; color: var(--ink-3); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; }
+
+/* 商品ページ */
+.crumbs { padding-top: 20px; font-size: 13px; color: var(--ink-3); }
+.product-hero { display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start; padding-top: 32px; padding-bottom: 48px; }
+.product-hero .text { flex: 999 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
+.product-hero h1 { margin: 0; font-family: var(--mincho); font-weight: 800; font-size: clamp(32px, 5vw, 48px); line-height: 1.35; letter-spacing: 0.04em; }
+.product-hero .catch { margin: 0; font-size: 19px; font-weight: 500; }
+.product-hero .shots { flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 12px; align-items: center; }
+.shot-main { width: 100%; max-width: 380px; aspect-ratio: 3 / 4; overflow: hidden; border: 1px solid var(--line); background: var(--card); }
+.shot-main img { width: 100%; height: 100%; object-fit: contain; }
+.thumbs { display: flex; gap: 12px; }
+.thumbs button {
+  width: 72px; height: 72px; padding: 0; border: 1px solid var(--line); background: var(--ground-2);
+  cursor: pointer; overflow: hidden; font: inherit; font-size: 11px; color: var(--ink-3);
+}
+.thumbs button[aria-pressed="true"] { border: 2px solid var(--ai); }
+.thumbs img { width: 100%; height: 100%; object-fit: cover; }
+
+.two-col { display: flex; flex-wrap: wrap; gap: 48px; }
+.two-col > div { flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
+.two-col ul, .two-col ol { margin: 0; padding-left: 1.3em; display: flex; flex-direction: column; gap: 8px; color: var(--ink-2); }
+h2.sub { margin: 0; font-family: var(--mincho); font-weight: 800; font-size: 26px; letter-spacing: 0.06em; }
+
+.menu { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; margin-top: 20px; }
+.menu > div { background: var(--card); border: 1px solid var(--line); padding: 20px; display: flex; flex-direction: column; gap: 2px; }
+.menu > div.free { border: 2px solid var(--ai); }
+.menu .rank { font-weight: 700; font-size: 18px; }
+.menu .qty { font-family: var(--mincho); font-weight: 800; font-size: 28px; }
+.menu .cond { color: var(--copper-ink); }
+.menu .free .cond { color: var(--ai); font-weight: 700; }
+
+.owner { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+.owner p { margin: 0; color: var(--ink-2); font-size: 17px; }
+.owner .sign { text-align: right; color: var(--ink-3); font-size: 14px; }
+
+.note { margin: 16px 0 0; font-size: 14px; color: var(--ink-3); }

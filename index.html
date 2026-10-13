@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>佐々木IT粗物店 | Sasaki Peopleware Works</title>
+<meta name="description" content="人が使って、はじめて役に立つ。店主手作りのIT仕立ての粗物(ツール、よみもの、書籍)を並べた店です。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="佐々木IT粗物店 | Sasaki Peopleware Works">
+<meta property="og:description" content="人が使って、はじめて役に立つ。店主手作りのIT仕立ての粗物を並べた店です。">
+<meta property="og:url" content="https://k1sasaki.github.io/">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./">
+      <span class="brand-ja">佐々木IT粗物店</span>
+      <span class="brand-en">Sasaki Peopleware Works</span>
+    </a>
+    <nav class="site-nav" aria-label="サイト内">
+      <a href="#shelf">品揃え</a>
+      <a href="#reading">よみもの</a>
+      <a href="#about">店主について</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="wrap hero" id="top">
+    <div class="hero-text">
+      <span class="hero-est">創業 二〇一九年</span>
+      <h1>人が使って、<br>はじめて役に立つ。</h1>
+      <p>箒も金盥も、置いておくだけでは何もしません。手に取る人がいて、はじめて道具になります。日本語ではそういう品を「粗物」と呼ぶそうです。当店の品も同じく、あなたが使って初めて働く、IT仕立ての粗物です。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#shelf">品揃えを見る</a>
+        <a class="btn btn-outline" href="#about">粗物店とは</a>
+      </div>
+    </div>
+    <figure class="hero-figure">
+      <!-- 店構えの画像ができたら、下の div を <img src="assets/storefront.jpg" alt="…"> に差し替え -->
+      <div class="ph" style="aspect-ratio: 4 / 3;">
+        <svg aria-hidden="true" width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#1F3A5F" stroke-width="2"><path d="M10 46h36"/><path d="M14 46V22l14-10 14 10v24"/><path d="M14 22h28"/><path d="M23 46V32h10v14"/></svg>
+        [店構えの画像]
+      </div>
+    </figure>
+  </section>
+
+  <section class="rule-top" id="shelf">
+    <div class="wrap section">
+      <div class="shelf-head">
+        <div>
+          <h2 class="sec">品揃え</h2>
+          <p class="lead">札の色で、いま手に取れるかどうかが分かります。</p>
+        </div>
+        <ul class="legend" aria-label="札の見方">
+          <li><span class="tag tag-stock">店頭在庫あり</span>すぐ使えます</li>
+          <li><span class="tag tag-order">お取り寄せ</span>要相談</li>
+          <li><span class="tag tag-soon">入荷予定</span>準備中</li>
+        </ul>
+      </div>
+
+      <!-- 商品を足すときは <article class="card"> … </article> を1つ複製して書き換えます -->
+      <div class="grid">
+
+        <article class="card">
+          <div class="card-shot ph">[画面写真]</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="tag tag-stock">店頭在庫あり</span>サービス</div>
+            <h3>自転車青切符対策ドリル</h3>
+            <p>115もある違反項目の反則金を当てるドリル。おためし10問は無料です。</p>
+            <a class="card-link" href="goods/bicycle-rule-drill/">詳しく見る <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-shot ph">[画面写真]</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="tag tag-stock">店頭在庫あり</span>サービス</div>
+            <h3>ふわふわ友だち関連図</h3>
+            <p>Facebookの友だちとの距離感を、ふわふわの円で眺められます。データは端末の中だけに。</p>
+            <a class="card-link" href="https://k1sasaki.github.io/fuwafuwa-friend/">使ってみる <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-shot ph">[画面写真]</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="tag tag-stock">店頭在庫あり</span>サービス</div>
+            <h3>ようつべパトロール</h3>
+            <p>YouTube登録チャンネルの新着だけを、前回からの差分で拾います。</p>
+            <a class="card-link" href="https://k1sasaki.github.io/youtube-channel-patrol/">使ってみる <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-shot ph">[イメージ画像:原稿と製本された本 など]</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="tag tag-order">お取り寄せ</span>サービス</div>
+            <h3>句集づくりのお手伝い</h3>
+            <p>私家版の句集など、個人の本づくりを編集から印刷所への発注まで手伝います。これまでに句集三冊を手がけました。</p>
+            <a class="card-link" href="#contact">相談する <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-shot ph">[画面写真]</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="tag tag-order">お取り寄せ</span>サービス</div>
+            <h3>ドラマ・トラッカー</h3>
+            <p>視聴したいドラマの配信元を追いかけます。</p>
+            <a class="card-link" href="#contact">相談する <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-shot ph">[画面写真]</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="tag tag-order">お取り寄せ</span>サービス</div>
+            <h3>Movie Clipper</h3>
+            <p>ご自宅の録画メディアと配信視聴記録の整理をお手伝いします。</p>
+            <a class="card-link" href="#contact">相談する <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-shot ph">[画面写真]</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="tag tag-order">お取り寄せ</span>サービス</div>
+            <h3>おかしな英会話</h3>
+            <p>Duolingoで勉強中に湧いた疑問を解決します。</p>
+            <a class="card-link" href="#contact">相談する <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-shot ph">[画面写真]</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="tag tag-soon">入荷予定</span>アプリケーション</div>
+            <h3>EasyWriter</h3>
+            <p>強力で軽快なMarkdown記法エディタ/ビュアー。</p>
+            <a class="card-link" href="#contact">入荷を問い合わせる <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="reading">
+    <div class="wrap section" style="display: flex; flex-direction: column; gap: 20px;">
+      <h2 class="sec">よみもの</h2>
+      <div class="links">
+        <a class="link-card" href="https://claude.ai/code/artifact/6510f13f-c2a2-4110-b480-1b14d58ff694">
+          <strong>mixi手仕舞い手順</strong>
+          <span>退会する前にしておくべきことをご紹介します。</span>
+        </a>
+        <a class="link-card" href="https://claude.ai/code/artifact/cfc6b047-eb6f-4b8c-baa0-d719ab127254">
+          <strong>アイコン整備キット</strong>
+          <span>自作アプリ用のアイコンの作り方、教えます。</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap section">
+    <div class="split">
+      <div class="main" id="about">
+        <h2 class="sec">店主について</h2>
+        <p style="margin: 0; color: var(--ink-2);">[店主の口上:2〜3行。なぜこの店をやっているか、どんな困りごとから品が生まれるか]</p>
+      </div>
+      <div class="side">
+        <h2 class="sec">お知らせ</h2>
+        <ul class="news">
+          <li><time>2026-10</time><span>店を Google サイトからこちらへ移転しました</span></li>
+          <li><time>2026-08-13</time><span>「ようつべパトロール」「ふわふわ友だち関連図」入荷しました</span></li>
+          <li><time>[日付]</time><span>「見まもリスク」は LINE Notify の終了に伴い販売終了しました。ご愛顧ありがとうございました</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div style="flex: 999 1 420px; min-width: 0;">
+      <h2 class="sec">お問い合わせ</h2>
+      <p>お取り寄せ品のご相談、PINコードのご用命、ご感想など、お気軽にどうぞ。</p>
+    </div>
+    <a class="btn btn-white" href="https://docs.google.com/forms/d/e/1FAIpQLScWH_Fzh9UWz6r9_JNsZ7UjkCKJo6SWyrzhDJFlYOaqEVPAxA/viewform">お問い合わせフォーム</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>佐々木IT粗物店 Sasaki Peopleware Works　創業 2019年1月1日</span>
+    <span>最終更新 2026-10-13</span>
+  </div>
+</footer>
+
+</body>
+</html>
