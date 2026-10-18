@@ -1,0 +1,178 @@
+<!doctype html>
+<!--
+  ============================================================
+  商品ページの雛形(佐々木IT粗物店)
+
+  使い方
+    1. この _template フォルダを丸ごと複製し、フォルダ名を商品の英字名に変える
+       (例:goods/fuwafuwa-friend/)。アプリのURLと同じ名前にすると迷わない。
+    2. 画面写真を同じフォルダに置く:card.png(棚・共有用、横長16:10)、
+       shot-1.png, shot-2.png …(使う順)
+    3. このファイルの【 】をすべて埋める。Ctrl+F で「【」を検索すると漏れがない。
+    4. 下の noindex の1行を消す(雛形は検索に出さないための行)。
+    5. 「★」の付いたコメントは、要らなければ塊ごと消してよい部分。
+    6. 最後にこの説明コメント(<!doctype html> の下からここまで)を消す。
+  ============================================================
+-->
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>【商品名】 | 佐々木IT粗物店</title>
+<meta name="description" content="【検索結果に出る説明。60字くらい】">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【商品名】 | 佐々木IT粗物店">
+<meta property="og:description" content="【共有されたときの説明。上と同じでよい】">
+<meta property="og:url" content="https://k1sasaki.github.io/goods/【フォルダ名】/">
+<meta property="og:image" content="https://k1sasaki.github.io/goods/【フォルダ名】/card.png">
+<meta property="og:image:alt" content="【card.png に写っているもの】">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+<!-- ===== ここから下のヘッダーは全ページ共通。触らない ===== -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../">
+      <span class="brand-ja">佐々木IT粗物店</span>
+      <span class="brand-en">Sasaki Peopleware Works</span>
+    </a>
+    <nav class="site-nav" aria-label="サイト内">
+      <a href="../../#shelf">品揃え</a>
+      <a href="../../#reading">よみもの</a>
+      <a href="../../#about">店主について</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <nav class="wrap crumbs" aria-label="現在地">
+    <a href="../../">ホーム</a> / <a href="../../#shelf">品揃え</a> / 【商品名】
+  </nav>
+
+  <!-- ===== 1. 看板:札・名前・キャッチ・紹介文・ボタン / 右に画面写真 ===== -->
+  <section class="wrap product-hero">
+    <div class="text">
+      <!-- 札は4種類から1つ:
+           tag-stock 店頭在庫あり / tag-order お取り寄せ / tag-soon 入荷予定 / tag-done 販売終了
+           札の隣の言葉は種別(サービス / アプリケーション / あそびもの / よみもの など) -->
+      <div class="card-meta"><span class="tag tag-stock">店頭在庫あり</span>【種別】</div>
+      <!-- 名前が長いときは <br> で好きな位置に改行できる -->
+      <h1>【商品名】</h1>
+      <p class="catch">【キャッチ1行目】<br>【キャッチ2行目】</p>
+      <p style="margin: 0; color: var(--ink-2);">【店主による紹介文。1〜2文】</p>
+      <div class="hero-actions">
+        <!-- 主ボタン:アプリを開く -->
+        <a class="btn btn-primary" href="https://k1sasaki.github.io/【アプリのフォルダ名】/">【ボタンの文言。例:使ってみる】
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h7v7M13 3 4 12"/></svg>
+        </a>
+        <!-- ★ 副ボタン:相談・申し込み。要らなければこの1行を消す -->
+        <a class="btn btn-outline" href="#contact">【副ボタンの文言。例:相談する】</a>
+      </div>
+    </div>
+
+    <!-- 画面写真:使う順に ① ② ③ …。増やすときは <figure> の塊を複製して番号を進める。
+         width / height は画像の実際の大きさ(分からなければ消してもよい) -->
+    <div class="shots">
+      <figure class="shot">
+        <img src="shot-1.png" alt="【この画像に写っているものの説明】" width="【幅】" height="【高さ】">
+        <figcaption>① 【この場面の一言】</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="shot-2.png" alt="【この画像に写っているものの説明】" width="【幅】" height="【高さ】">
+        <figcaption>② 【この場面の一言】</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="shot-3.png" alt="【この画像に写っているものの説明】" width="【幅】" height="【高さ】">
+        <figcaption>③ 【この場面の一言】</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== 2. こんな方に / あなたが使うと、こう働きます ===== -->
+  <section class="band-white">
+    <div class="wrap section two-col">
+      <div>
+        <h2 class="sub">こんな方に</h2>
+        <ul>
+          <li>【こんな人 1】</li>
+          <li>【こんな人 2】</li>
+          <li>【こんな人 3】</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="sub">あなたが使うと、こう働きます</h2>
+        <ol>
+          <li>【使うと起きること 1】</li>
+          <li>【使うと起きること 2】</li>
+          <li>【使うと起きること 3】</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3. お品書き(利用条件) =====
+       ★ 料金・回数・条件などを箱で並べる。条件が1つだけなら、箱は消して
+         下の <p class="note"> だけ残してもよい。ゲームなら見出しを「遊び方」にしても可。
+         class="free" を付けた箱は藍色の枠で強調される -->
+  <section class="wrap section">
+    <h2 class="sub">お品書き</h2>
+    <div class="menu">
+      <div class="free"><span class="rank">【区分名】</span><span class="qty">【中身】</span><span class="cond">【条件】</span></div>
+      <div><span class="rank">【区分名】</span><span class="qty">【中身】</span><span class="cond">【条件】</span></div>
+    </div>
+    <p class="note">【利用条件の補足。データの扱い、無料/応相談 など】</p>
+  </section>
+
+  <!-- ===== 4. 店主のひとこと(段落を増やすときは <p> を足す) ===== -->
+  <section class="band">
+    <div class="wrap section owner">
+      <h2 class="sub">店主のひとこと</h2>
+      <p>【作った経緯や裏話】</p>
+      <p class="sign">― 店主 佐々木</p>
+    </div>
+  </section>
+
+  <!-- ===== 5. 関連の品(2〜3点。この商品自身は入れない) ===== -->
+  <section class="wrap section" style="display: flex; flex-direction: column; gap: 20px;">
+    <h2 class="sub">こちらの品もどうぞ</h2>
+    <div class="links">
+      <a class="link-card" href="../【別の商品のフォルダ名】/">
+        <strong>【別の商品名】</strong>
+        <span>【その商品の一行説明】</span>
+      </a>
+      <a class="link-card" href="../【別の商品のフォルダ名】/">
+        <strong>【別の商品名】</strong>
+        <span>【その商品の一行説明】</span>
+      </a>
+    </div>
+  </section>
+</main>
+
+<!-- ===== 6. お問い合わせ(文言の1行だけ商品に合わせる) ===== -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div style="flex: 999 1 420px; min-width: 0;">
+      <h2 class="sec">お問い合わせ</h2>
+      <p>【例:ご相談、ご感想はこちらから。】</p>
+    </div>
+    <a class="btn btn-white" href="https://docs.google.com/forms/d/e/1FAIpQLScWH_Fzh9UWz6r9_JNsZ7UjkCKJo6SWyrzhDJFlYOaqEVPAxA/viewform">お問い合わせフォーム</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>佐々木IT粗物店 Sasaki Peopleware Works　創業 2019年1月1日</span>
+    <span>最終更新 【YYYY-MM-DD】</span>
+  </div>
+</footer>
+
+</body>
+</html>
