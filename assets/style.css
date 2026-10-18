@@ -131,6 +131,8 @@ h2.sec { margin: 0; font-family: var(--mincho); font-weight: 800; font-size: 30p
 .product-hero h1 { margin: 0; font-family: var(--mincho); font-weight: 800; font-size: clamp(32px, 5vw, 48px); line-height: 1.35; letter-spacing: 0.04em; }
 .product-hero .catch { margin: 0; font-size: 19px; font-weight: 500; }
 .product-hero .shots { flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 12px; align-items: center; }
+.shot { margin: 0; max-width: 100%; }
+.shot img { width: 100%; height: auto; }
 .shot-main { width: 100%; max-width: 380px; aspect-ratio: 3 / 4; overflow: hidden; border: 1px solid var(--line); background: var(--card); }
 .shot-main img { width: 100%; height: 100%; object-fit: contain; }
 .thumbs { display: flex; gap: 12px; }
