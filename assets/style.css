@@ -129,6 +129,10 @@ h2.sec { margin: 0; font-family: var(--mincho); font-weight: 800; font-size: 30p
 .product-hero { display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start; padding-top: 32px; padding-bottom: 48px; }
 .product-hero .text { flex: 999 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
 .product-hero h1 { margin: 0; font-family: var(--mincho); font-weight: 800; font-size: clamp(32px, 5vw, 48px); line-height: 1.35; letter-spacing: 0.04em; }
+.product-title { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.product-title img { width: 64px; height: 64px; border-radius: 14px; flex-shrink: 0; object-fit: cover; }
+/* カルタ風(縦長・緑の縁)のバッジ。白地や線画のロゴなど、正方形バッジだと寂しいときに img に class="karuta" を足す */
+.product-title img.karuta { width: 60px; height: 92px; border-radius: 6px; object-fit: contain; background: #fff; border: 3px solid #3f7a43; padding: 4px; }
 .product-hero .catch { margin: 0; font-size: 19px; font-weight: 500; }
 .product-hero .shots { flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 12px; align-items: center; }
 .shot { margin: 0; max-width: 100%; }
