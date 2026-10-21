@@ -36,7 +36,8 @@ img { max-width: 100%; height: auto; display: block; }
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
   gap: 4px 32px; padding-top: 12px; padding-bottom: 12px;
 }
-.brand { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 12px; text-decoration: none; color: var(--ink); }
+.brand { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; text-decoration: none; color: var(--ink); }
+.brand-mark { width: 36px; height: 36px; border-radius: 8px; flex-shrink: 0; }
 .brand-ja { font-family: var(--mincho); font-weight: 800; font-size: 22px; letter-spacing: 0.08em; }
 .brand-en { font-size: 12px; color: var(--ink-3); letter-spacing: 0.06em; }
 .site-nav { display: flex; flex-wrap: wrap; gap: 0 24px; font-size: 15px; }
