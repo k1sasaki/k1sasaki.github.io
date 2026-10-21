@@ -16,8 +16,15 @@ goods/
   _template/index.html     商品ページの雛形(複製して使う)
   bicycle-rule-drill/      商品ページの見本
     index.html
+    card.html              棚に出すカードの中身(商品名・一言・リンクなど)
     card.png               棚のカード・共有用(横長 16:10)
     shot-1.png …           画面写真(使う順)
+tools/
+  build_shelf.py           shelf-order.txt の順に card.html を集めて棚を組み立てる
+  includer.py              ヘッダーなど共通部分を部品化して差し込む
+parts/
+  header.html, head-assets.html   共通部分の部品(includer.py が使う)
+shelf-order.txt            棚の並び順・「一押し」区分
 .nojekyll                  ファイルをそのまま公開するための空ファイル
 ```
 
@@ -31,7 +38,7 @@ goods/
 2. 画面写真を同じフォルダに置く。`card.png`(横長 16:10)と `shot-1.png`、`shot-2.png` …(使う順)。
 3. `index.html` の【 】を埋める。Ctrl+F で「【」を検索して、残りがなくなるまで。
 4. `noindex` の1行と、先頭の説明コメントを消す。
-5. 店先の `index.html` の棚にカードを置く(下記)。
+5. 店先の棚にカードを置く(下記)。
 6. プレビューで確かめる(パソコン幅とスマホ幅)。
 
 ### ページの型(この順番を守る)
@@ -56,21 +63,28 @@ goods/
 
 ### 店先の棚に置くカード
 
-`index.html`(トップ)の `<div class="grid">` の中に、次の塊を1つ足す(または既存のカードを書き換える)。
+棚の「どこに何を書くか」(カードの中身)と「どの順番で・一押しかどうか」(並び)は別の場所にあります。`index.html` の `<div class="grid">` は直接編集しません(自動生成される場所です)。
 
-```html
-<article class="card">
-  <div class="card-shot"><img src="goods/【フォルダ名】/card.png" alt="【写っているもの】" width="【幅】" height="【高さ】"></div>
-  <div class="card-body">
-    <div class="card-meta"><span class="tag tag-stock">店頭在庫あり</span>【種別】</div>
-    <h3>【商品名】</h3>
-    <p>【一行説明】</p>
-    <a class="card-link" href="goods/【フォルダ名】/">詳しく見る <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-  </div>
-</article>
-```
+1. `goods/【フォルダ名】/card.html` を作る(実在するページが無い商品でも、このファイルだけは作る):
 
-画像がまだなければ、`<div class="card-shot"> … </div>` を `<div class="card-shot ph">[画面写真]</div>` にしておく。
+   ```html
+   <article class="card">
+     <div class="card-shot"><img src="goods/【フォルダ名】/card.png" alt="【写っているもの】" width="【幅】" height="【高さ】"></div>
+     <div class="card-body">
+       <div class="card-meta"><span class="tag tag-stock">店頭在庫あり</span>【種別】</div>
+       <h3>【商品名】</h3>
+       <p>【一行説明】</p>
+       <a class="card-link" href="goods/【フォルダ名】/">詳しく見る <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+     </div>
+   </article>
+   ```
+
+   画像がまだなければ、`<div class="card-shot"> … </div>` を `<div class="card-shot ph">[画面写真]</div>` にしておく。
+
+2. `shelf-order.txt` に、そのフォルダ名を1行足す(「一押し」に入れたければその見出しの下に)。
+3. `python3 tools/build_shelf.py` を実行する。`index.html` の棚が、その場で組み立て直される。
+
+並び順を変えたい・一押しを入れ替えたいだけのときも、`shelf-order.txt` を直してから2を実行するだけでよい。
 
 ## 作業と公開の流れ
 
