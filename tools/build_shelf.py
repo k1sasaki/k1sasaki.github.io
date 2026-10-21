@@ -16,6 +16,9 @@ shelf-order.txt は「# 一押し」「# それ以外」の見出しで2つの�
   1. goods/<名前>/card.html に、そのカードの中身(<article class="card">…</article>)を書く
   2. shelf-order.txt に <名前> を1行足す
   3. このスクリプトを実行する
+
+index.html側の <!-- include:shelf --> の外側は <!-- #region --> で囲ってあるので、
+エディタ(VSCode)で折りたたんでおけば、直接いじってしまう事故を減らせる。
 """
 import argparse
 import re
@@ -94,7 +97,7 @@ def main():
     featured = render_group(goods_dir, groups["一押し"])
     regular = render_group(goods_dir, groups["それ以外"])
 
-    base = "      "  # <div class="shelf-head"> と同じ深さ
+    base = "        "  # <div class="編集禁止-自動生成-ここは触らない"> の1段下
     card_indent = base + "  "
 
     parts = []
