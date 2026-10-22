@@ -21,6 +21,7 @@ goods/
     shot-1.png …           画面写真(使う順)
 tools/
   build_shelf.py           shelf-order.txt の順に card.html を集めて棚を組み立てる
+  build_related.py         shelf-order.txt をもとに「こちらの品もどうぞ」を自動で選ぶ
   includer.py              ヘッダーなど共通部分を部品化して差し込む
 parts/
   header.html, head-assets.html   共通部分の部品(includer.py が使う)
@@ -47,7 +48,7 @@ shelf-order.txt            棚の並び順・「一押し」区分
 2. こんな方に / あなたが使うと、こう働きます
 3. お品書き(利用条件)※ゲームなら「遊び方」でも可
 4. 店主のひとこと
-5. こちらの品もどうぞ(関連の品 2〜3点)
+5. こちらの品もどうぞ(関連の品2点・自動生成。下記参照)
 6. お問い合わせ
 
 違うことをしたいときは、まず型どおりに作ってから、その商品だけの部分を足す。
@@ -85,6 +86,19 @@ shelf-order.txt            棚の並び順・「一押し」区分
 3. `python3 tools/build_shelf.py` を実行する。`index.html` の棚が、その場で組み立て直される。
 
 並び順を変えたい・一押しを入れ替えたいだけのときも、`shelf-order.txt` を直してから2を実行するだけでよい。
+
+### 商品ページの「こちらの品もどうぞ」
+
+各商品ページの5番目のセクションも手で書きません。`shelf-order.txt` にある他の商品から、
+商品名をもとにした決め打ちの選び方で2件選び、その商品の `card.html` にあるタイトル・一行説明・
+リンクをそのまま使って自動で組み立てます(同じ顔ぶれである限り、何度実行しても同じ2件になる)。
+
+```
+python3 tools/build_related.py
+```
+
+`index.html` 側の `<!-- include:related -->` の中(棚と同じく `#region` で畳んである)は直接編集しません。
+新しい商品を `shelf-order.txt` に足したら、`build_shelf.py` と合わせてこちらも実行しておく。
 
 ## 作業と公開の流れ
 
