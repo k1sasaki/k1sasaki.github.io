@@ -1,8 +1,9 @@
 # 一押し
 rummy1
 namitakashi_llm
-enpitsu_kusen
+napoleon
 # それ以外
+enpitsu_kusen
 bicycle-rule-drill
 fuwafuwa-friend
 movieclo1
