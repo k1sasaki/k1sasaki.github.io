@@ -1,10 +1,10 @@
 # 一押し
 rummy1
 namitakashi_llm
-enpitsu_kusen
-# それ以外
-bicycle-rule-drill
 napoleon
+# それ以外
+enpitsu_kusen
+bicycle-rule-drill
 fuwafuwa-friend
 movieclo1
 youtube-channel-patrol
