@@ -3,11 +3,11 @@ rummy1
 namitakashi_llm
 napoleon
 # それ以外
+youtube-channel-patrol
 enpitsu_kusen
 bicycle-rule-drill
 fuwafuwa-friend
 movieclo1
-youtube-channel-patrol
 drama-tracker
 okashina_eikaiwa
 easywriter

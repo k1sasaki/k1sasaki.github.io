@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ようつべパトロール | 佐々木IT粗物店</title>
+<meta name="description" content="YouTube登録チャンネルの新着動画だけを、前回確認からの差分でまとめて見られる無料ツールです。自分のAPIキーで使う、ブラウザだけの仕組みです。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ようつべパトロール | 佐々木IT粗物店">
+<meta property="og:description" content="登録チャンネルの新着だけを、差分でまとめて見るツールです">
+<meta property="og:url" content="https://k1sasaki.github.io/goods/youtube-channel-patrol/">
+<meta property="og:image" content="https://k1sasaki.github.io/goods/youtube-channel-patrol/card.png">
+<meta property="og:image:alt" content="ようつべパトロールの画面。登録チャンネルの新着動画がチャンネルごとにまとめて表示されている">
+<meta name="twitter:card" content="summary_large_image">
+<!-- #region 自動生成(編集しない) -->
+<!-- include:head-assets -->
+<link rel="icon" href="../../assets/favicon.ico" sizes="any">
+<link rel="icon" href="../../assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/dev-badge.js"></script>
+<script src="../../assets/lightbox.js" defer></script>
+<!-- /include:head-assets -->
+<!-- #endregion -->
+</head>
+<body>
+
+<!-- #region 自動生成(編集しない) -->
+<div class="編集禁止-自動生成-ここは触らない">
+<!-- include:header -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../">
+      <img class="brand-mark" src="../../assets/logo.png" alt="">
+      <span class="brand-ja">佐々木IT粗物店</span>
+      <span class="brand-en">Sasaki Peopleware Works</span>
+    </a>
+    <nav class="site-nav" aria-label="サイト内">
+      <a href="../../#shelf">品揃え</a>
+      <a href="../../#reading">よみもの</a>
+      <a href="../../#about">店主について</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+<!-- /include:header -->
+</div>
+<!-- #endregion -->
+
+<main>
+  <nav class="wrap crumbs" aria-label="現在地">
+    <a href="../../">ホーム</a> / <a href="../../#shelf">品揃え</a> / ようつべパトロール
+  </nav>
+
+  <section class="wrap product-hero">
+    <div class="text">
+      <div class="card-meta"><span class="tag tag-stock">店頭在庫あり</span>サービス</div>
+      <div class="product-title">
+        <img src="logo.png" alt="">
+        <h1>ようつべパトロール</h1>
+      </div>
+      <p class="catch">新着動画を見逃さない<br>溜まってしまった登録チャンネルを整理する</p>
+      <p style="margin: 0; color: var(--ink-2);">
+        登録済みのチャンネルに新着があると通知されているはずですが、確認しないままにしている、どこに新着があったか忘れてしまいがちです。
+      </p>
+      <p style="margin: 0; color: var(--ink-2);">
+        そして長く使っていると、関心の薄くなったチャンネルが溜まってしまい、いつかきれいにしたい、と思ったまま放置され続け、最近、登録したものもその中に埋もれがちです。
+      </p>
+
+      <p style="margin: 0; color: var(--ink-2);">
+        まずは使い方をご一読ください、そして・・・
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://k1sasaki.github.io/youtube-channel-patrol/">使ってみる(無料)
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h7v7M13 3 4 12"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="shots">
+      <figure class="shot">
+        <img src="shot-1.png" alt="ようつべパトロールの画面。APIキー・整理しましょう・新着の点検・追加しましたかの4つのセクションが並んでいる" width="1460" height="936">
+        <figcaption>① 四つのセクションに分かれているので、必要に応じて開きましょう。</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="shot-2.png" alt="APIキー欄。取得したAPIキーをマスクした状態で設定している" width="1447" height="547">
+        <figcaption>② Googleから取得したYouTube Data API v3用のAPIキーはここに設定しておきます。 </figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="shot-3.png" alt="整理しましょう欄。CSVから95件のチャンネルを取り込んだ直後の一覧" width="1430" height="1071">
+        <figcaption>③ Googleから取得した登録チャンネル.csvは「整理しましょう」セクションにドロップします。</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="shot-4.png" alt="新着の点検欄。巡回完了後、チャンネルごとに新着動画の件数が並んでいる" width="1438" height="1062">
+        <figcaption>④「新着の点検」セクションで「巡回する」ボタンを押すと全登録チャンネルの新着動画が報告されます。</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="shot-5.png" alt="ブラウザのブックマークバーにあるブックマークレットを示す矢印" width="1457" height="872">
+        <figcaption>⑤ 「API」セクションにあるブックマークレットをブックマークに追加しておき、新たに登録しようとしているチャンネルを見ながらクリックすると、</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="shot-6.png" alt="追加しましたか欄。ブックマークレット経由で見つかった候補チャンネルが表示されている" width="1407" height="892">
+        <figcaption>⑥ 「追加しましたか」セクションにそのURLが準備されているので、ここで巡回対象に追加することができます。もちろん直書きでも追加できます。</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="band-white">
+    <div class="wrap section two-col">
+      <div>
+        <h2 class="sub">こんな方に</h2>
+        <ul>
+          <li>登録チャンネルが増えすぎて、新着を見落としがちな方</li>
+          <li>毎日ではなく、たまにまとめて棚卸ししたい方</li>
+          <li>自分のAPIキーを使うひと手間を面倒がらない方(PC作業に慣れた方向けです)</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="sub">あなたが使うと、こう働きます</h2>
+        <ol>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap section">
+    <p class="note">(以下ではスマホなどでなく、PCでの操作を前提としています。Googleのアカウントが必要です。)</p>
+    <h2 class="sub">初めて使うときは</h2>
+    <ol>
+      <li>「APIキー」に、Google Cloud ConsoleでYouTube Data API v3を有効化して取得したキーを入れます。この端末のブラウザにだけ保存され、YouTube(Google)以外へは送信されません。
+        <ol>
+          <li>常用のブラウザでGoogle Cloud Consoleを検索し、ログインします</li>
+          <li>新しいプロジェクトを作成します。YouTubeパトロールとわかる名前を付けます</li>
+          <li>「APIとサービス」→「ライブラリ」で <b>YouTube Data API v3</b> を検索して有効化します</li>
+          <li>「APIとサービス」→「認証情報」→「認証情報を作成」→「APIキー」でキーを発行します</li>
+          <li>そのAPIキーを、ようつべパトロールページのAPIキーに設定して、隠します</li>
+        </ol>
+      </li>
+      <li>「整理しましょう」に、Google Takeout(takeout.google.com)で書き出した登録チャンネルのCSVをドラッグ&ドロップします。
+        <ol>
+          <li>https://takeout.google.com/ を開くとエクスポート依頼画面になります。このままだと全データが対象となってしまうので、いったんすべて選択を解除します。</li>
+          <li>「<b>YouTube と YouTube Music</b>」をブラウザ内で検索し、それを✔して「次へ」とします。</li>
+          <li>ファイル形式や頻度などを指定する画面になりますが、そのまま頻度が1回であることを確認して「エクスポートを作成」します。</li>
+          <li>takeoutの画面を閉じて完了メールを待ちます。</li>
+          <li>完了メールにあるリンクをたどって、認証を受けるとブラウザのダウンロードフォルダに結果が保存されます。</li>
+          <li>zipファイルなのでそれを展開し、その中の「登録チャンネル」フォルダにあるCSVファイルを取り出します。</li>
+          <li>そのファイルを、ようつべパトロールページの「整理しましょう」欄にドラッグ&ドロップします。</li>
+          <li>登録していたチャンネル全件が並びます(ただしまだ巡回していないので情報は不足しています)。</li>
+        </ol>
+      </li>
+      <li>「新着の点検」の「巡回する」を押すと、初回は過去3ヶ月分ほどの新着動画がチャンネルごとに表示されます。</li>
+    </ol>
+    <h2 class="sub">通常の使い方</h2>
+    <ol>
+      <li>新着の点検
+        <ul>
+          <li>「巡回する」を押すとチャンネルごとに新着動画がまとまって現れます。</li>
+          <li>見たいチャンネルは「チャンネルを開く」リンクで別タブで開くことができます。</li>
+          <li>もう見ないと思ったチャンネルは、「対象外」リンクでこのアプリの巡回対象から外せます。</li>
+          <li>ただしYouTube本体の登録解除とは連動しないので、それは別途ご自身で行ってください。</li>
+        </ul>
+      </li>
+      <li>整理しましょう
+        <ul>
+          <li>チャンネル一覧から棚卸しができます。</li>
+          <li>各行に最新投稿のサムネイルショットが表示されるので、チャンネルを開かなくても内容を思い出しやすくなっています。</li>
+          <li>登録が増えたら同じCSVを取り直してドロップするだけで、増えた分だけ自動で追加されます。</li>
+          <li>このとき「今回はこのCSVに完全に同期する」にチェックを入れると、CSVに無くなったものを一括で対象外にすることもできます。</li>
+        </ul>
+      </li>
+      <li>追加しましたか
+        <ul>
+          <li>csvでの取込後、追加したいチャンネルがあれば、URL・@ハンドル・チャンネルID・動画URLのいずれかを貼り付けて手動追加できます。</li>
+          <li>その手間を省くために「APIキー」欄にブックマークレットを用意しました。</li>
+          <li>これをブラウザのブックマークバーにドラッグしておくと、追加したいチャンネルを見ているときにワンクリックでそのページを、このアプリでの追加候補として取り込めます。</li>
+        </ul>
+      </li>
+    </ol>
+    <p class="note">データはすべてこの端末のブラウザ内(localStorage)に保存されるだけで、佐々木IT粗物店を含め外部へは送信されません。</p>
+  </section>
+
+  <section class="band">
+    <div class="wrap section owner">
+      <h2 class="sub">店主のひとこと</h2>
+      <p>登録チャンネルが増えてくると、YouTubeのトップページは「おすすめ」に埋もれて、追っているチャンネルの新着を見落とすようになりました。自分用に、差分だけ見られる道具を作ったのが始まりです。友人にも配れるよう、各自が自分のAPIキーを使う仕組みにしました。</p>
+      <p class="sign">― 店主 佐々木</p>
+    </div>
+  </section>
+
+  <!-- #region 自動生成(編集しない) -->
+  <div class="編集禁止-自動生成-ここは触らない">
+  <!-- include:related -->
+  <section class="wrap section" style="display: flex; flex-direction: column; gap: 20px;">
+    <h2 class="sub">こちらの品もどうぞ</h2>
+    <div class="links">
+      <a class="link-card" href="../rummy1/">
+        <strong>海保ジンラミー</strong>
+        <span>海上保安庁に在籍中、先輩から教わって覚えたトランプ遊びを、コンピュータ相手にブラウザで。</span>
+      </a>
+      <a class="link-card" href="#contact">
+        <strong>おかしな英会話</strong>
+        <span>Duolingoで勉強中に湧いた疑問を解決します。</span>
+      </a>
+    </div>
+  </section>
+  <!-- /include:related -->
+  </div>
+  <!-- #endregion -->
+</main>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div style="flex: 999 1 420px; min-width: 0;">
+      <h2 class="sec">お問い合わせ</h2>
+      <p>ご感想、ご質問はこちらから。</p>
+    </div>
+    <a class="btn btn-white" href="https://docs.google.com/forms/d/e/1FAIpQLScWH_Fzh9UWz6r9_JNsZ7UjkCKJo6SWyrzhDJFlYOaqEVPAxA/viewform">お問い合わせフォーム</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>佐々木IT粗物店 Sasaki Peopleware Works　創業 2019年1月1日</span>
+    <span>最終更新 2026-11-05</span>
+  </div>
+</footer>
+
+</body>
+</html>
