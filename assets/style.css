@@ -174,3 +174,20 @@ h2.sub { margin: 0; font-family: var(--mincho); font-weight: 800; font-size: 26p
 .owner .sign { text-align: right; color: var(--ink-3); font-size: 14px; }
 
 .note { margin: 16px 0 0; font-size: 14px; color: var(--ink-3); }
+
+/* 画面写真のライトボックス(クリックで拡大) */
+.shot img { cursor: zoom-in; }
+.lightbox-overlay {
+  position: fixed; inset: 0; background: rgba(28, 36, 48, 0.88);
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px; z-index: 1000; cursor: zoom-out;
+}
+.lightbox-overlay img {
+  max-width: 100%; max-height: 100%; width: auto; height: auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4); cursor: default; background: var(--card);
+}
+.lightbox-close {
+  position: absolute; top: 16px; right: 20px;
+  width: 40px; height: 40px; border-radius: 50%; border: none;
+  background: var(--card); color: var(--ink); font-size: 22px; line-height: 1; cursor: pointer;
+}
