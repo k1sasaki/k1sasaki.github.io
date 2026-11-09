@@ -3,12 +3,12 @@ rummy1
 namitakashi_llm
 napoleon
 # それ以外
+drama-tracker
 youtube-channel-patrol
 enpitsu_kusen
 bicycle-rule-drill
 fuwafuwa-friend
 movieclo1
-drama-tracker
 okashina_eikaiwa
 easywriter
 kushu
