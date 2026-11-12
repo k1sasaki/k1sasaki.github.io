@@ -25,6 +25,7 @@
 <script src="../../assets/lightbox.js" defer></script>
 <!-- /include:head-assets -->
 <!-- #endregion -->
+<style>.menu .cond { font-size: 18px; font-weight: 700; }</style>
 </head>
 <body>
 
@@ -68,11 +69,12 @@
         <h1>葛屋</h1>
       </div>
       <p class="catch">世の中配信、ストリーミング流行ですが、<br>何でもオンデマンドで観れるわけではありません。<br>当店なら「眠狂四郎」や「兵隊やくざシリーズ」を<br>ほぼ全作、お貸しできるかもしれません。</p>
-      <p style="margin: 0; color: var(--ink-2);">TSUTAYA、ではありません、こちらは「葛屋」です。<br>全3000タイトル超という録画の中から、貴重な録画をお選びください。</p>
+      <p style="margin: 0; color: var(--ink-2);">TSUTAYA、ではありません、こちらは「葛屋」です。<br>全3000タイトル超という録画の中から、観忘れていた作品を発見してください。</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#contact">相談する</a>
       </div>
-      <p class="note">今のところ、手渡し可能な方を対象とさせていただいております。ご了承ください。</p>
+      <p class="note">今のところ、手渡し可能な方を対象とさせていただいております。ご了承ください。<br>
+      私の視聴記録も兼ねていて、媒体が手元にないものもあります。ご容赦ください。</p>
     </div>
 
     <!-- 画面写真:使う順に ① ② ③ …。増やすときは <figure> の塊を複製して番号を進める。
@@ -115,18 +117,19 @@
       <div>
         <h2 class="sub">こんな方に</h2>
         <ul>
-          <li>【こんな人 1】</li>
-          <li>【こんな人 2】</li>
-          <li>【こんな人 3】</li>
+          <li>もう面倒で、放送の録画予約なんかしたくないなぁ</li>
+          <li>とはいえ、気になってるあの映画は是非、観ておきたい</li>
+          <li>購入して持っていたい、って程でもないんだよなぁ</li>
+          <li>そのために一か月だけの配信契約ってのも面倒だし</li>
         </ul>
       </div>
       <div>
         <h2 class="sub">あなたが使うと、こう働きます</h2>
-        <ol>
-          <li>【使うと起きること 1】</li>
-          <li>【使うと起きること 2】</li>
-          <li>【使うと起きること 3】</li>
-        </ol>
+        <ul>
+          <li>店主と仲良しになっているだけで、</li>
+          <li>観たかった映画を観ることができるし、</li>
+          <li>記憶の隅に引っかかっていた作品を、思い出すこともできますよ。</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -137,18 +140,33 @@
          class="free" を付けた箱は藍色の枠で強調される -->
   <section class="wrap section">
     <h2 class="sub">お品書き</h2>
-    <div class="menu">
-      <div class="free"><span class="rank">【区分名】</span><span class="qty">【中身】</span><span class="cond">【条件】</span></div>
-      <div><span class="rank">【区分名】</span><span class="qty">【中身】</span><span class="cond">【条件】</span></div>
+    <div class="menu" style="grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));">
+      <div>
+        <span class="rank">【通常利用者】</span>
+        <span class="qty">一回につき</span>
+        <span>ディスク5枚まで(管理上の都合です)</span>
+        <span class="qty">協力金 500円</span>
+        <span class="cond">【条件】次にお会いする日まで</span>
+        <span>記録媒体には目的作品以外が収録されている場合があります。</span>
+        <span>その他の収録内容はおまけとしてご自由にお楽しみください。</span>
+        <span>店主は延滞についてあまりうるさいことを言いません。</span>
+        <span class="note"></span>
+      </div>
+      <div>
+        <span class="rank">【年払い会員】</span>
+        <span class="qty">一年間、何度でも</span>
+        <span>ただし一度の貸し出しでは、ディスク5枚まで</span>
+        <span class="qty">年会費 500円</span>
+        <span class="cond">【条件】店主と親しい方が、年払い会員として昇格できます</span>
+      </div>
     </div>
-    <p class="note">【利用条件の補足。データの扱い、無料/応相談 など】</p>
   </section>
 
   <!-- ===== 4. 店主のひとこと(段落を増やすときは <p> を足す) ===== -->
   <section class="band">
     <div class="wrap section owner">
       <h2 class="sub">店主のひとこと</h2>
-      <p>【作った経緯や裏話】</p>
+      <p>別途ご紹介している<a href="../movie-clipper/">MovieClipper</a>という仕組みは、私のライフワークでした。これも移植して使ってもらおうとしていますが、私の集めた作品もぜひご紹介したい。それならついでにお貸しすればいいだろう、ということでご案内することにしました。</p>
       <p class="sign">― 店主 佐々木</p>
     </div>
   </section>
