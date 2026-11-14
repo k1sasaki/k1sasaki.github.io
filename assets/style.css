@@ -70,6 +70,7 @@ h2.sec { margin: 0; font-family: var(--mincho); font-weight: 800; font-size: 30p
 .tag-order { border: 1.5px solid var(--copper); color: var(--copper-ink); }
 .tag-soon  { border: 1.5px dashed #6B7280; color: var(--ink-3); }
 .tag-done  { border: 1.5px solid #9A948A; color: var(--ink-3); background: var(--ground-2); }
+.tag-built { background: var(--copper); color: #FFFFFF; border: 1.5px solid var(--copper); }
 
 /* 店先 */
 .hero { display: flex; flex-wrap: wrap; gap: 48px; align-items: center; padding-top: 72px; padding-bottom: 56px; }
