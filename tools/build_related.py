@@ -33,6 +33,13 @@ def flat_order(path: Path) -> list[str]:
     return names
 
 
+def is_soon(goods_dir: Path, name: str) -> bool:
+    card_path = goods_dir / name / "card.html"
+    if not card_path.exists():
+        return False
+    return "tag-soon" in card_path.read_text(encoding="utf-8")
+
+
 def parse_card(goods_dir: Path, name: str):
     card_path = goods_dir / name / "card.html"
     if not card_path.exists():
@@ -111,7 +118,7 @@ def main():
         if not target_path.exists():
             continue  # このページはまだ無い(商品はあるがサイト内ページ未作成)
 
-        others = [n for n in all_names if n != name]
+        others = [n for n in all_names if n != name and not is_soon(goods_dir, n)]
         k = min(args.count, len(others))
         picks = random.Random(name).sample(others, k)
 
