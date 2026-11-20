@@ -1,15 +1,15 @@
 # 一押し
-rummy1
-namitakashi_llm
-napoleon
-# それ以外
-drama-tracker
-youtube-channel-patrol
-enpitsu_kusen
-bicycle-rule-drill
-fuwafuwa-friend
-rental-movie
-okashina_eikaiwa
 easywriter
-kushu
+youtube-channel-patrol
+drama-tracker
+# それ以外
+enpitsu_kusen
+rummy1
+napoleon
+namitakashi_llm
+bicycle-rule-drill
 kakashime
+rental-movie
+fuwafuwa-friend
+okashina_eikaiwa
+kushu
