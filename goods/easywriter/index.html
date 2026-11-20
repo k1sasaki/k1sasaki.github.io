@@ -66,6 +66,11 @@
       </div>
       <p class="catch">インストールも会員登録も要りません。<br>1枚のHTMLファイルだけで動く、軽いMarkdownメモ帳です。</p>
       <p style="margin: 0; color: var(--ink-2);">ブラウザだけで動く単体のMarkdownエディタ/ビュアーです。お手元のファイルをそのまま開いて、そのまま上書き保存できます。</p>
+      <div id="ew-browser-hint" class="note" style="display: none; padding: 10px 14px; background: var(--ground-2); border-left: 4px solid var(--copper);">
+        <p style="margin: 0 0 8px;">⚠️ SNSアプリ内のブラウザで開いているようです。保存がダウンロード扱いになりやすいので、下のボタンでURLをコピーし、SafariやChromeなど普段お使いのブラウザに貼り付けて開いてください。</p>
+        <button type="button" id="ew-copy-url-btn" class="btn btn-outline" style="padding: 6px 14px; font-size: 14px; min-height: auto;">URLをコピー</button>
+        <span id="ew-copy-url-status" style="margin-left: 8px; font-size: 13px;"></span>
+      </div>
       <div class="hero-actions">
         <a class="btn btn-primary" id="ew-download-btn" href="https://raw.githubusercontent.com/k1sasaki/easywriter-lite/main/index.html" download="EasyWriter-lite.html">ダウンロードする
           <svg aria-hidden="true" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h7v7M13 3 4 12"/></svg>
@@ -211,6 +216,48 @@ document.getElementById("ew-download-btn").addEventListener("click", function (e
       // 取得に失敗した場合は、せめて元のリンク先を開く
       window.location.href = url;
     });
+});
+</script>
+<script>
+// SNSアプリ内蔵ブラウザ(Instagram/Facebook/LINEなど)で開かれている場合、
+// File System Access APIが使えないことが多く、保存がダウンロード扱いになりやすいので一言添える
+(function () {
+  var ua = navigator.userAgent || "";
+  var isInApp = /Instagram|FBAN|FBAV|FB_IAB|Line\//i.test(ua);
+  if (isInApp) {
+    var el = document.getElementById("ew-browser-hint");
+    if (el) el.style.display = "block";
+  }
+})();
+
+document.getElementById("ew-copy-url-btn").addEventListener("click", function () {
+  var url = location.href;
+  var status = document.getElementById("ew-copy-url-status");
+  function showDone() { if (status) status.textContent = "コピーしました"; }
+  function showFail() { if (status) status.textContent = "コピーできませんでした。URL欄から手動でコピーしてください"; }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(url).then(showDone, function () {
+      legacyCopy(url) ? showDone() : showFail();
+    });
+  } else {
+    legacyCopy(url) ? showDone() : showFail();
+  }
+  function legacyCopy(text) {
+    try {
+      var ta = document.createElement("textarea");
+      ta.value = text;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.focus();
+      ta.select();
+      var ok = document.execCommand("copy");
+      document.body.removeChild(ta);
+      return ok;
+    } catch (e) {
+      return false;
+    }
+  }
 });
 </script>
 </body>
